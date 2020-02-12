@@ -1,4 +1,4 @@
-package javaee;
+package javaee.integration;
 
 import org.junit.Test;
 
@@ -6,7 +6,7 @@ public class DAOPattern {
 
 	// Data Access Object Pattern
 	// : 데이터 베이스에 접근하는 클래스를 추상화하고 캡슐화하여 비즈니스 로직과 분리  
-	// : DAO 클래스를 통해 데이터 베이스에 접근하여 데이터를 저장, 수정, 삭제하는 등 데이터를 관리
+	// : DAO 클래스를 통해 데이터 베이스에 접근하여 데이터를 저장, 수정, 삭제하는 등 데이터를 조작함      
 	
 	// 1. DTO 또는 Entity 클래스
 	// 2. DAO 인터페이스
