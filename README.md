@@ -9,15 +9,17 @@
     - [JDK](./java-platform.md#jdk)
     - [JDK version](./jdk-version.md)
         - [JDK9](./jdk9.md)
-- [Java Programming Language](./java-programming-language.md)
-    - [java SE](./java-programming-language.md#java-se)
-    - [java EE (Jakarta EE)](./java-programming-language.md#java-ee)
-    - [java ME](./java-programming-language.md#java-me)
+- [Java Programming Language](./java-basic/)
+- Java API
+    - [Java SE](./java-se/)
+    - [Java EE](./java-ee/)
 - [Java Pattern](./java-pattern/)
-- [Java Framework](./Framework/)
+- [Java Framework](./java-framework/)
+- [Java Library](./java-lib/)
+    - [Java Template Engine](./java-lib/template-engine/)
 - [Java Tool](./java-tool/)
-    - [build](./Build/)
-    - [Template Engine](./Template-Engine/)
+    - [Java Build](./java-tool/build/)
+    - [Java CI/CD](./java-tool/ci-cd/)
 
 
 
@@ -31,7 +33,7 @@
 Java Community Process  
 : 자바 관리 조직   
 : 자바 플랫폼 버전 및 기능 정의  
-: 자바 명칭 문제로 EE.next로 이름 변경  
+: Java EE 경우 소유권이 Eclipse Foundation으로 넘어가면서 EE.next Working Group 에서 검토   
 
 
 
