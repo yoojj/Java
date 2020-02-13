@@ -1,8 +1,20 @@
 # Java Platform
-: 자바 프로그램을 개발하고 실행하기 위한 프로그램-도구 모음    
+: 자바 프로그램을 개발하고 실행하기 위한 프로그램-도구 모음     
+: jdk9 부터 모듈 시스템으로 인해 JRE와 JDK에 포함된 라이브러리를 모듈식으로 지원
+
+**Java Platform Module System**  
+: 약 90개 모듈로 분리하여 지원    
 
 - [JRE](#jre)
 - [JDK](#jdk)
+
+
+언어 플랫폼 | 특징 | 패키지
+---|---|---
+Java SE (Standard Edition)   | 기본 핵심 기능 | JDK
+Java EE (Enterprise Edition) | 엔터프라이즈 애플리케이션 | Java EE SDK
+Java ME (Mobile Edition)     | 임베디드, 모바일, IoT | Java ME SDK
+Java Embedded                | Java ME Embedded + Java SE Embedded | Java Embedded Suite
 
 
 
@@ -30,6 +42,19 @@ OS
 - [Java Class Library](./java-class-lib.md)
 - [Java Class Loader](./java-class-loader.md)
 - [Java Virtual Machine](./java-virtual-machine.md)
+
+
+
+### rt.jar    
+: RunTime  
+: Java Runtime 환경을 위한 모든 클래스 파일           
+: 부트스트랩 클래스 로더에 의해 가장 먼저 로드되며 JVM이 검사하지 않음   
+
+- Java Class Library   
+- Core Java API
+
+**Core Java API**   
+http://openjdk.java.net/groups/core-libs/  
 
 
 
