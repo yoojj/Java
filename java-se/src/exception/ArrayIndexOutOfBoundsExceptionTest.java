@@ -7,6 +7,9 @@ public class ArrayIndexOutOfBoundsExceptionTest {
 	// ArrayIndexOutOfBoundsException
 	// : 유효하지 않는 인덱스로 배열에 접근을 시도할 경우 발생 
 	
+	// + IndexOutOfBoundsException
+	// + StringIndexOutOfBoundsException
+	
 	
 	
 	@Test
