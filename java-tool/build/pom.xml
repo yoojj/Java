@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+<!--
+# POM (Project Object Model)
+: 선언적 접근 방식
+: 모든 프로젝트의 pom은 메이븐에서 기본으로 제공하는 상위 pom을 상속받아 동작
+: super pom.xml에 기본 디렉터리 구조가 정의되어 있음
+
+
+1. 기본 정보 정의
+2. 빌드 설정
+3. 환경 설정
+
+
+## 1. 기본 정보 정의
+groupId:artifactId:version = 메이븐 주소
+
+<parent></parent>
+: 상위 pom.xml 참조
+
+<dependencyManagement></dependencyManagement>
+: 현재 pom.xml을 상속 할 하위 pom.xml에게 의존성 관계 관련 속성 정보를 상속
+
+<modules></modules>
+: 멀티 모듈 기반 프로젝트에 사용
+
+
+## 2. 빌드 설정
+<build></build>
+-->
+
+
+
+<modelVersion>4.0.0</modelVersion>
+<groupId></groupId>
+<artifactId></artifactId>
+<name></name>
+
+
+<packaging>war</packaging>
+<!--
+: 애플리케이션 패키징 방법
+: super pom에서 기본 값은 jar
+- war
+- jar
+- ear
+! 이외 방법으로 지정시 별도 플러그인 필요
+-->
+
+
+
+<version>1.0.0-BUILD-SNAPSHOT</version>
+<!--
+: 애플리케이션 버전
+- SNAPSHOT : 미완성
+- RELEASE  : 완성되어 공식 배포된 버전
+-->
+
+
+
+<properties>
+<!--
+: 현재 pom.xml 내부에서 사용할 속성 정의
+-->
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+	<java-version>1.8</java-version>
+</properties>
+
+
+
+<dependencies>
+<!--
+: 의존성 관리
+: 프로젝트에서 직접 사용하는 라이브러리만 정의하면 의존성이 있는 라이브러리는 메이븐이 묵시적으로 추가함
+
+
+# 의존성 목록 확인
+$ mvn dependency:resolve
+
+# 의존성 관계 구조 확인
+$ mvn dependency:tree
+
+# 의존성 분석
+$ mvn dependency:analyze
+
+# 의존성 버전 충돌 출력 - maven-enforcer-plugin 추가
+$ mvn enforcer:enforce
+
+
+의존성 버전 범위
+<version>[1,3)</version> // 1버전 이상 3버전 이하
+
+의존성 충돌시 제거
+<exclusions></exclusions>
+
+의존성 스코프
+<scope>
+- compile : 기본값
+- provided : 패키지에 포함되지 않음  ex. Servlet, J2EE
+- runtime : 런타임시에만 필요  ex. JDBC
+- test : 테스트 시점에만 필요
+- system : 참조하는 라이브러리를 메이븐 저장소가 아닌 외부에서 찾음
+</scope>
+-->
+</dependencies>
+
+
+
+<build>
+</build>
+
+
+
+</project>
