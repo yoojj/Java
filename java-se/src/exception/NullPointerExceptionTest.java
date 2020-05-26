@@ -6,7 +6,7 @@ import org.junit.Test;
 public class NullPointerExceptionTest {
 
 	// NullPointerException
-	// : 인스턴스를 생성하지 않았는데 객체의 변수에 접근하거나 메소드 호출시 발생
+	// : 인스턴스를 생성하지 않았는데 객체 참조시 발생  
 	
 
 	
@@ -29,7 +29,7 @@ public class NullPointerExceptionTest {
 	}
 	
 	@SuppressWarnings("null")
-	@Test
+	@Test @Ignore
 	public void objectTest() {
 		
 		try {
@@ -42,6 +42,20 @@ public class NullPointerExceptionTest {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	@Test
+	public void methodTest() {
+		
+		// 주의
+		final Object result = this.method(null);
+		
+		System.out.println(result);
+	
+	}
+
+	private Object method(Object obj) {
+		return obj;
 	}
 	
 }
