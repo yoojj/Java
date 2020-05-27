@@ -37,11 +37,11 @@ java.lang.Throwable
 : 오류가 발생하여도 이를 처리할 수 없음          
 
 **종류**   
-- NoClassDefFoundError
-- OutOfMemoryError
-- StackOverflowError
 - VirtualMachineError
-- ...
+	- OutOfMemoryError
+	- StackOverflowError
+	- InternalError -- JVM에서 발생하는 오류  
+	- UnknownError -- JVM에서 발생하는 오류  
 
 
 
@@ -66,7 +66,7 @@ ex. 파일 시스템, 네트워크 등
 
 
 
-### Exception Handling
+## Exception Handling
 : 프로그램의 정상적인 실행 흐름을 유지할 수 있도록 예외가 발생할 것 같은 코드에 예외 처리를 함   
 
 **종류**   
@@ -76,9 +76,7 @@ ex. 파일 시스템, 네트워크 등
 
 
 
-
-#### try-catch
-
+###  try-catch
 
 **try-catch block**   
 : try 블록에서 예외가 발생하면 catch 블록에서 처리     
@@ -137,12 +135,12 @@ try {
 ```
 
 
-#### throw  
+### throw  
 : 강제 예외 발생
 
 
 
-#### throws
+### throws
 : 메소드에서 예외를 발생할 경우 자신이 예외를 처리하지 않고 해당 메소드를 호출한 상위 메소드에게 예외를 전달   
 : 상위 메소드에서 try-catch로 예외 처리  
 : throws와 try-catch가 동시에 존재할 경우 try-catch가 우선 순위가 더 높음  
