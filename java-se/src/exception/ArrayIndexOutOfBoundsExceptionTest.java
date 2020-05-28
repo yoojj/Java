@@ -1,6 +1,5 @@
 package exception;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class ArrayIndexOutOfBoundsExceptionTest {
@@ -14,7 +13,7 @@ public class ArrayIndexOutOfBoundsExceptionTest {
 	
 	
 	@Test 
-	public void arrayTest() {
+	public void test() {
 		
 		try {
 			
