@@ -2,7 +2,7 @@ package util;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
+import java.util.Iterator;
 import java.util.stream.Collectors;
 
 import org.junit.Ignore;
@@ -12,8 +12,10 @@ public class CollectionTest {
 
 	// Collection 
 	// : Map을 제외한 모든 JCF의 루트 인터페이스    
+	// : Collection을 구현한 클래스는 Collection 타입을 인수로 갖는 생성자가 존재해 컬렉션 타입 변환 가능    
+	//   CollectionClass (Collection<? extends E> c)
 	
-
+	
 	
 	@SuppressWarnings("null")
 	@Test @Ignore
@@ -59,14 +61,48 @@ public class CollectionTest {
 		
 	}
 	
-	@Test
+	@Test @Ignore
+	public void forEachTest() {
+		
+		final Collection<Integer> c = Arrays.asList(1,2,3,4,5);
+		
+		for (Object o : c)
+			System.out.println(o);
+		
+	}
+	
+	@Test @Ignore
+	public void iteratorTest() {
+		
+		final Collection<Integer> c = Arrays.asList(1,2,3,4,5);
+		
+		final Iterator<?> i = c.iterator();
+		
+		while(i.hasNext())
+			System.out.println(i.next());
+		
+	}
+	
+	@Test @Ignore
+	public void arrayTest() {
+		
+		final Collection<Integer> c = Arrays.asList(1,2,3,4,5);
+		
+		final Object[] arr = c.toArray();
+		
+		for(int i = 0, len = arr.length ; i < len ; ++i) 
+			System.out.println(arr[i]);
+		
+	}
+	
+	@Test @Ignore
 	public void streamTest() {
 		
 		final Collection<Integer> c = Arrays.asList(1,2,3,4,5);
 			
-		final List<String> list = c.stream().filter(i -> i <=3).map(Object::toString).collect(Collectors.toList());
+		final Collection<String> filter = c.stream().filter(i -> i <=3).map(Object::toString).collect(Collectors.toList());
 		
-		list.forEach(System.out::println);
+		filter.forEach(System.out::println);
 		
 	}
 	
