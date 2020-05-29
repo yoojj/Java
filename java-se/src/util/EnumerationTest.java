@@ -1,9 +1,9 @@
 package util;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Enumeration;
-import java.util.List;
 import java.util.Vector;
 
 import org.junit.Ignore;
@@ -13,10 +13,13 @@ public class EnumerationTest {
 
 	// Enumeration
 	// : 열거자  
-	// : Vector, HashTable 객체에 저장된 원소에 접근하기 위한 인터페이스  
-	// : 객체 순회중 객체 변경 여부와 상관없이 순회 완료  
+	// : Vector, Stack, HashTable 객체에 저장된 요소에 접근하기 위한 인터페이스  
+	// : 요소 읽기만 가능하며 수정이나 삭제 등의 기능은 지원하지 않음  
+	// : fail-safe 방식으로 객체 순회중 객체 변경 여부와 상관없이 순회를 완료 
 	
-	// + Iterator (jdk 1.2)
+	// + Iterator 
+	// + ListIterator 
+	// + Spliterator 
 	
 	
 	
@@ -26,10 +29,10 @@ public class EnumerationTest {
 	
 		final Enumeration<?> e = null;
 		
-		// 다음 원소가 있으면 true, 없으면 false 반환
+		// 다음 요소가 있으면 true 없으면 false 반환
 		e.hasMoreElements();
 		
-		// 다음 원소 반환
+		// 다음 요소 반환
 		e.nextElement();
 		
 	}
@@ -39,28 +42,26 @@ public class EnumerationTest {
 	
 		final Vector<String> v = new Vector<>();
 		
-		v.add("A");
-		v.add("B");
-		v.add("C");
+		v.add("a");
+		v.add("b");
+		v.add("c");
 		
 		final Enumeration<?> e = v.elements();
 		
-		while(e.hasMoreElements()) {
+		while(e.hasMoreElements()) 
 			System.out.println(e.nextElement());
-		}
 		
 	}
 	
-	@Test
-	public void collectionTest() {
+	@Test 
+	public void collectionToEnumerationTest() {
 		
-		final List<Integer> list = Arrays.asList(1,2,3,4,5);
+		final Collection<Integer> c = Arrays.asList(1,2,3,4,5);
 		
-		final Enumeration<?> e = Collections.enumeration(list);
-		
-		while(e.hasMoreElements()) {
+		final Enumeration<?> e = Collections.enumeration(c);
+
+		while(e.hasMoreElements()) 
 			System.out.println(e.nextElement());
-		}
 		
 	}
 	
