@@ -22,7 +22,22 @@ public class SerializableTest {
 	
 	// serialVersionUID
 	// : 객체 직렬화에 사용하는 값
-	// : 정의하지 않으면 JVM이 해당 클래스의 해시 값을 이용하여 자동 생성
+	// : 정의하지 않으면 JVM이 해당 클래스의 정보를 이용해 자동 생성
+	// : 같은 이름의 클래스라도 UID 값이 다르면 다른 클래스로 인식 
+	
+	/* JVM UID 생성
+		1. UID 값 계산에 사용되는 정보 조합
+			1. 클래스명
+			2. 클래스 접근 제한자
+			3. 멤버 필드의 시그니처 (식별자, 접근 제한자, 타입)
+			4. 멤버 메소드의 시그니처 
+			5. 생성자의 시그니처 
+			6. static initializer block 존재 유무
+		2. 조합된 정보로 나온 문자열을 SHA 알고리즘 처리 
+		
+		=> 클래스가 수정되면 UID값이 변하게 되므로 사용자가 명시적으로 값을 주는 것이 좋음  
+	 */
+	
 	// Serialization Specification
 	// https://docs.oracle.com/javase/8/docs/platform/serialization/spec/serialTOC.html
 
