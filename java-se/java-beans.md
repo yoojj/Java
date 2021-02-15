@@ -52,23 +52,20 @@ https://download.oracle.com/otndocs/jcp/7224-javabeans-1.01-fr-spec-oth-JSpec/
 : 필요에 따라 이벤트 메소드를 가질 수 있음   
 
 
-**데이터 빈즈**   
+
+### 데이터 빈즈   
 : 계층간의 데이터 전달을 위한 빈   
 : 구조화된 데이터를 교환하거나 데이터를 은닉하는 기능 제공   
 : read-write, read-only, write-only
 
 
-빈 | 특징
----|---
-VO (Value Object) | 불변적  
-DTO (Data Transfer Object) | 가변적  
+- VO (Value Object) : 불변적  
+- DTO (Data Transfer Object) : 가변적  
 
 
-**서비스 빈즈**   
-: 공통 기능을 모듈화하는 빈     
 
-- DAO (Data Access Object)
-- EJB : session bean, entity bean
+### 서비스 빈즈   
+: 공통 기능을 모듈화한 빈     
 
 
 
