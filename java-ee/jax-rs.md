@@ -3,6 +3,17 @@ Java API for RESTful Web Services
 : RESTful 방식을 지원하는 API
 
 
+**JSR**   
+https://jcp.org/en/jsr/detail?id=311  
+https://jcp.org/en/jsr/detail?id=339   
+
+
+**구현**  
+- Apache CXF (http://cxf.apache.org/)
+- RESTEasy (https://resteasy.github.io/)
+- Jersey (https://jersey.github.io/)
+
+
 **어노테이션**  
 - @Path
 - @GET
@@ -10,7 +21,7 @@ Java API for RESTful Web Services
 - @PUT
 - @DELETE
 - @HEAD
-- @OPTION 
+- @OPTION
 - @Produces
 - @Consumes
 - @PathParam
@@ -23,7 +34,7 @@ Java API for RESTful Web Services
 - @Context
 
 
-
+ex.
 ```java
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -35,24 +46,22 @@ import javax.ws.rs.core.Response;
 public class HelloWorld {
 
 	private String msg = "Hello World";
-	
+
 	@GET
 	@Produces("text/plain")
 	public String getMsg(){
 		return this.msg;
 	}
-	
+
 	@DELETE
 	public Response deleteMsg(){
 		this.msg = "";
 		return Response.noContent().build();
 	}
+
 }
 ```
 
 
 
-**구현**  
-- Apache CXF (http://cxf.apache.org/)
-- RESTEasy (https://resteasy.github.io/)
-- Jersey (https://jersey.github.io/)
+[top](#)
