@@ -15,13 +15,13 @@ public class Variable {
 	
 	
 	
-	@Test 
+	@Test @Ignore
 	public void test() {
 
 		System.out.println(Variable.CONSTANT);
 		System.out.println(Variable.staticVariable);
 		
-		Variable var = new Variable();
+		final Variable var = new Variable();
 		
 		System.out.println(var.finalVariable);
 		System.out.println(var.variable);
@@ -29,12 +29,9 @@ public class Variable {
 	}
 	
 	@SuppressWarnings("unused")
-	@Test @Ignore
+	@Test @Ignore 
 	public void localVariable() {
-		
-		// 지역 변수 
-		// : 메소드 안에서 선언된 변수 
-		// : 선언된 메소드 안에서만 사용 가능 
+
 		String localVariable = "지역 변수";
 		
 		System.out.println(localVariable);
@@ -44,6 +41,7 @@ public class Variable {
 		
 		// 초기화하지 않은 변수는 참조할 수 없음
 		//System.out.println(str);
+
 		
 	}
 	
@@ -54,7 +52,7 @@ public class Variable {
 		
 	}
 	
-	public String method(String parameter) {
+	private String method(String parameter) {
 		return parameter;
 	}
 	
